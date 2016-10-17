@@ -32,22 +32,22 @@ public class ItemTouchActivity extends AppCompatActivity {
         adapter = new MyAdapter(list, this);
         recyclerView.setAdapter(adapter);
         MyItemTouchHelperCallback callback = new MyItemTouchHelperCallback(adapter);
-        ItemTouchHelper helper = new ItemTouchHelper(callback);
+        final ItemTouchHelper helper = new ItemTouchHelper(callback);
         helper.attachToRecyclerView(recyclerView);
-//        recyclerView.addOnItemTouchListener(new OnRecylerViewItemClickListener(recyclerView) {
-//            @Override
-//            public void onItemClick(RecyclerView.ViewHolder vh) {
-//                Toast.makeText(ItemTouchActivity.this,vh.getAdapterPosition()+"",Toast.LENGTH_SHORT).show();
-//            }
-//
-//            @Override
-//            public void onItemLongClick(RecyclerView.ViewHolder vh) {
-//                if (vh.getLayoutPosition()!=list.size()-1) {
-//                    helper.startDrag(vh);
-//                }
-//                Toast.makeText(ItemTouchActivity.this,vh.getAdapterPosition()+"buke",Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        recyclerView.addOnItemTouchListener(new OnRecylerViewItemClickListener(recyclerView) {
+            @Override
+            public void onItemClick(RecyclerView.ViewHolder vh) {
+                Toast.makeText(ItemTouchActivity.this,vh.getAdapterPosition()+"",Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onItemLongClick(RecyclerView.ViewHolder vh) {
+                if (vh.getLayoutPosition()!=list.size()-1) {
+                    helper.startDrag(vh);
+                }
+                Toast.makeText(ItemTouchActivity.this,vh.getAdapterPosition()+"buke",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
