@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@mipmap/jia"
+        app:showAsAction="ifRoom"
+        android:title="增加">
+    </item>
+
+    <item android:id="@+id/menu_switch"
+        android:icon="@mipmap/qiehuan"
+        app:showAsAction="ifRoom"
+        android:title="切换">
+
+    </item>
+    <item android:id="@+id/menu_nextActivity"
+        android:icon="@mipmap/next"
+        android:title="跳转"
+        app:showAsAction="always">
+
+    </item>
+</menu>

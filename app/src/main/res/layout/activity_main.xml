@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iflytek.com.iniapp.activity.MainActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="test  "
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="60dp"></android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <android.support.v4.view.ViewPager
+         android:layout_weight="1"
+         android:id="@+id/vp"
+         android:layout_height="0dp"
+         android:layout_width="match_parent"/>
+
+    <android.support.design.widget.TabLayout
+        app:tabTextAppearance="@style/CustomTabLayoutText"
+        android:id="@+id/tablayout"
+        app:tabMode="scrollable"
+        app:tabTextColor="#7B7B7B"
+        app:tabSelectedTextColor="#3B9DFF"
+        app:tabIndicatorColor="#7B7B7B"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"></android.support.design.widget.TabLayout>
+    </LinearLayout>
+</LinearLayout>
